@@ -1,0 +1,155 @@
+.App {
+	text-align: center;
+	position: relative;
+	width:100vw;
+	height:100vh;
+	background-color:#aaa;
+}
+#root{
+	position:relative;
+	width:100vw;
+	height:100vh;
+}
+
+.Header-h2{
+	padding:0;
+	margin:0;
+	width:200px;
+	font-size: 16px;
+	line-height: 40px;
+	color:#fff;
+	background-color: #000;
+	z-index:100;
+}
+#webgpuTitle{
+    position:absolute;
+    left: 20px;
+	top: 0;
+}
+
+#webglTitle{
+    position:absolute;
+    right: 20px;
+	text-align: left;
+	text-indent: 20px;
+	top: 0;
+}
+#webgpuFrameRate{
+	position: absolute;
+	display:block;
+	padding:0;
+    margin:0;
+	top:40px;
+    left:20px;
+	width:200px;
+    height:30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: left;
+	text-indent: 20px;
+	color:#fff;
+	background-color: #000;
+	z-index:100;
+}
+#webglFrameRate{
+	position: absolute;
+	display:block;
+	padding:0;
+    margin:0;
+	top:40px;
+    right:20px;
+	width:200px;
+    height:30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: left;
+	text-indent: 20px;
+	color:#fff;
+	background-color: #000;
+	z-index:100;
+}
+#canvasContainer{
+    position:absolute;
+	left:0;
+	top:0;
+	width:100vw;
+	height:100vh;
+	background-color: rgb(0, 0, 0);
+
+    #webgpuCanvas{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100vw;
+        height:100vh;
+		/* width:512px;
+        height:512px; */
+        background-color: rgb(8, 104, 136);
+		outline:none;
+    }
+    /* #webglCanvas{
+        position:absolute;
+        left:50vw;
+        top:0;
+        width:50vw;
+        height:100vh;
+        background-color: rgb(202, 75, 25);
+		outline:none;
+    } */
+}
+
+#textureContainer{
+	position:absolute;
+	right:0;
+	top:100px;
+	width:100vw;
+	height:256px;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+
+	#displacementCanvas{
+		position:absolute;
+		left:30px;
+		top:0;
+		width:256px;
+		height:256px;
+		background-color: rgb(0, 0, 0);
+		/* filter: brightness(1.0); */
+		filter: contrast(4.0);
+	}
+	#displacementPrecisionCanvas{
+		position:absolute;
+		left:300px;
+		top:0;
+		width:128px;
+		height:128px;
+		background-color: rgb(0, 0, 0);
+		filter: brightness(1.0);
+	}
+	#gradientCanvas{
+		position:absolute;
+		right:30px;
+		top:0;
+		width:256px;
+		height:256px;
+		
+		background-color: rgb(0, 0, 0);
+		filter: contrast(5.0);
+	}
+	#gradientPrecisionCanvas{
+		position:absolute;
+		right:300px;
+		top:0;
+		width:128px;
+		height:128px;
+		background-color: rgb(0, 0, 0);
+		filter: brightness(1.0);
+	}
+}
+
+.react-dat-gui{
+    position:absolute;
+    left:50vw !important;
+    transform: translateX(-50%);
+    transform-origin: 0%;
+}
